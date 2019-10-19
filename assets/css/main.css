@@ -196,6 +196,11 @@ input, select, textarea {
 		margin-bottom: 2em;
 	}
 
+	.centered {
+		text-align: center;
+		margin: auto;
+	}
+
 /* Container */
 
 	.container {
@@ -226,12 +231,19 @@ input, select, textarea {
 				width: 90%;
 			}
 
+			#header-wrapper {
+				padding: 0.5em 0 0 0 !important;
+			}
+
 		}
 
 		@media screen and (max-width: 736px) {
 
 			.container {
 				width: 100%;
+			}
+
+			#header-wrapper {
 			}
 
 		}
@@ -1913,26 +1925,32 @@ input, select, textarea {
 
 	#header-wrapper {
 		padding: 0.5em 0 0.25em 0;
- 		position: absolute;
+ 		position: fixed;
 		width: 100%;
 		z-index: 1;
 		overflow: hidden;
+		background: rgba(255,255,255,0.25);
 	}
 
 	#header-wrapper:before {
-		 content: ' ';
-		 background: inherit;
-		 position: absolute;
-		 left: -25px;
-		 right: -25px;
-		 top: -25px;
-		 bottom: 0;
-		 box-shadow: inset 0px 0px 0px 200px rgba(150,150,150,0.5);
-		 filter: blur(10px);
+		content: ""; /* Important */
+		z-index: -1; /* Important */
+		position: inherit;
+		left: inherit;
+		top: inherit;
+		width: inherit;
+		height: inherit;
+		background-image: inherit;
+		background-size: cover;
+		-webkit-filter: blur(8px);
+		-moz-filter: blur(8px);
+		-o-filter: blur(8px);
+		-ms-filter: blur(8px);
+		filter: blur(8px);
 	}
 
 	#features-wrapper {
-		margin-top: 4em;
+		margin-top: 7em;
 		padding: 3em 0 3em 0;
 	}
 
@@ -1943,7 +1961,7 @@ input, select, textarea {
 	}
 
 	#footer-wrapper {
-		padding: 6em 0 8em 0;
+		padding: 6em 0 0em 0;
 	}
 
 /* Header */
@@ -1956,7 +1974,7 @@ input, select, textarea {
 
 	#logo {
 		display: inline-block;
-		width: 95%;
+		width: 17.5%;
 		margin: 0 auto;
 	}
 	#logo img {
@@ -2110,8 +2128,12 @@ input, select, textarea {
 		padding: 0;
 		width: 100%;
 	}
-		#mainBanner img {
+		.bannerImg {
 			width: inherit;
+		}
+		.bannerImg-mobile {
+			width: inherit;
+			display: none;
 		}
 
 		#banner h2 {
@@ -2189,7 +2211,7 @@ input, select, textarea {
 
 	#copyright {
 		color: #aaa;
-		padding: 4em 0 0 0;
+		padding: 2em 0 0 0;
 		text-align: center;
 	}
 
@@ -2206,7 +2228,6 @@ input, select, textarea {
 			body, input, select, textarea {
 				font-size: 12pt;
 			}
-
 	}
 
 /* Large */
@@ -2316,7 +2337,7 @@ input, select, textarea {
 			}
 
 			#footer-wrapper {
-				padding: 6em 0 4em 0;
+				padding: 6em 0 0em 0;
 			}
 
 		/* Header */
@@ -2326,6 +2347,11 @@ input, select, textarea {
 			}
 
 		/* Logo */
+
+			#logo {
+				display: inline-block;
+				width: 40%;
+			}
 
 			#logo span {
 				display: block;
@@ -2353,6 +2379,21 @@ input, select, textarea {
 					position: relative;
 					right: auto;
 					top: auto;
+				}
+				#banner-wrapper {
+					padding: 0 !important;
+				}
+
+				.bannerImg {
+				  display: none;
+				}
+				.bannerImg-mobile {
+				  display: block;
+					width: inherit; /* Width of new image */
+					height: inherit; /* Height of new image */
+				}
+				#mid-banner-wrapper {
+					margin-top: -0.5px !important;
 				}
 
 		/* Content */
@@ -2401,54 +2442,65 @@ input, select, textarea {
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
 				display: block;
-				height: 44px;
-				left: 0;
+				height: inherit;
+				left: 0px;
 				position: fixed;
-				top: 0;
+				top: 0px;
 				width: 100%;
 				z-index: 10001;
 			}
 
 				#navToggle .toggle {
 					text-decoration: none;
-					width: 70px;
-					height: 50px;
-					opacity: 0.35;
+					width: 45px;
+					height: 35px;
+					opacity: 1;
 				}
 
-					#navToggle .toggle:before {
-						-moz-osx-font-smoothing: grayscale;
-						-webkit-font-smoothing: antialiased;
-						display: inline-block;
-						font-style: normal;
-						font-variant: normal;
-						text-rendering: auto;
-						line-height: 1;
-						text-transform: none !important;
-						font-family: 'Font Awesome 5 Free';
-						font-weight: 900;
-					}
 
 					#navToggle .toggle:before {
 						display: inline-block;
 						text-decoration: none;
 						position: absolute;
-						left: 6px;
-						top: 6px;
-						background: rgba(0, 0, 0, 0.5);
-						width: 58px;
-						height: 38px;
+						left: 16px;
+						top: 10px;
+						width: 45px;
+						height: 35px;
 						border-radius: 6px;
-						content: '\f0c9';
+						content: url('./images/ham-menu.svg');
 						color: #fff;
 						text-align: center;
-						line-height: 38px;
-						font-size: 20px;
 					}
 
 					#navToggle .toggle:active {
-						opacity: 0.75;
+						opacity: 0.5;
 					}
+
+				#navToggle .btn {
+					text-decoration: none;
+					width: 45px;
+					height: 35px;
+					opacity: 1;
+				}
+
+				#navToggle .btn:before {
+					display: inline-block;
+					text-decoration: none;
+					position: absolute;
+					right: 16px;
+					top: 3px;
+					width: 45px;
+					height: 45px;
+					border-radius: 6px;
+					content: url('./images/phone.svg');
+					color: #fff;
+					text-align: center;
+				}
+
+				#navToggle .btn:active {
+					opacity: 0.5;
+				}
+
 
 			#navPanel {
 				-moz-backface-visibility: hidden;
