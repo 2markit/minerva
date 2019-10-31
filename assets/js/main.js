@@ -30,8 +30,8 @@
 		// Toggle.
 			$(
 				'<div id="navToggle">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-					'<a href="#" class="btn"></a>' +
+					'<a href="#navPanel" class="toggle noSelect"></a>' +
+					'<a href="tel:1-604-288-7690" class="btn noSelect"></a>' +
 				'</div>'
 			)
 				.appendTo($body);
