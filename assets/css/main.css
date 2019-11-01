@@ -220,6 +220,13 @@ input, select, textarea {
     max-width: 1276px !important;
 	}
 
+
+	.title {
+		font-size: 21.5pt;
+		margin: 0 0 0.5em 0;
+	}
+
+
 		@media screen and (max-width: 1680px) {
 
 			.container {
@@ -503,6 +510,12 @@ input, select, textarea {
 				}
 
 		@media screen and (max-width: 1680px) {
+
+
+			.title {
+				font-size: 20.5pt;
+				margin: 0 0 0.5em 0;
+			}
 
 			.row {
 				display: flex;
@@ -2337,6 +2350,12 @@ input, select, textarea {
 		top: 4.5px;
 	}
 
+
+	.title {
+		font-size: 20.5pt;
+		margin: 0 0 0.5em 0;
+	}
+
 		/* Basic */
 
 			body, input, select, textarea {
@@ -2365,6 +2384,11 @@ input, select, textarea {
 		top: 6px;
 	}
 
+	.title {
+		font-size: 20.5pt;
+		margin: 0 0 0.5em 0;
+	}
+
 		/* Basic */
 
 			body, input, select, textarea {
@@ -2390,6 +2414,11 @@ input, select, textarea {
 	}
 
 	@media screen and (max-width: 980px) {
+
+		.title {
+			font-size: 19.5pt;
+			margin: 0 0 0.5em 0;
+		}
 
 
 		/* Return to Top */
