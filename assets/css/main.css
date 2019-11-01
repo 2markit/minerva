@@ -2077,7 +2077,10 @@ input, select, textarea {
 		margin: 0 auto;
 		max-height: 68px;
 	}
+
 	#logo img {
+		height: 100%;
+		width: 100%;
 	}
 
 		#logo h1 {
