@@ -84,6 +84,13 @@
 				    }, 500);
 				});
 
+				$(document).ready(function () {
+				    // Handler for .ready() called.
+				    $('html, body').animate({
+				        scrollTop: $('#top').offset().top - 125
+				    },'slow');
+				});
+
 				var pContainerHeight = $('body').height();
 
 				$window.scroll(function(){
