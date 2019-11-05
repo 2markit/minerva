@@ -2251,6 +2251,57 @@ input, select, textarea {
 			display: none;
 		}
 
+	.bannerText {
+		position: absolute;
+		top: 30vh;
+		left: 10vw;
+		height: inherit;
+	}
+
+	.bannerText h1 {
+		text-align: center;
+		font-size: 3.5em;
+		margin-bottom: 0.75em;
+		font-weight: 500;
+	}
+
+	@media screen and (max-width: 2560px) {
+			.bannerText {
+				top: 32.5vh;
+			}
+			.bannerText h1 {
+				text-align: center;
+				font-size: 2.5em;
+				margin-bottom: 0.5em;
+				font-weight: 500;
+			}
+	}
+
+	@media screen and (max-width: 1920px) {
+			.bannerText h1 {
+				text-align: center;
+				font-size: 1.75em;
+				margin-bottom: 0.35em;
+				font-weight: 500;
+			}
+	}
+
+	@media screen and (max-width: 1368px) {
+			.bannerText {
+				position: absolute;
+				top: 35vh;
+				left: 10vw;
+				height: inherit;
+			}
+
+			.bannerText h1 {
+				text-align: center;
+				font-size: 1.5em;
+				margin-bottom: 0.1em;
+				font-weight: 500;
+			}
+	}
+
 		#banner h2 {
 			font-size: 3.5em;
 			margin: 0.1em 0 0.35em 0;
@@ -2368,7 +2419,7 @@ input, select, textarea {
 			}
 
 			#mid-banner .bannerLogo {
-				height: 20%;
+				height: 12.75%;
 				width: 100%;
 			}
 	}
@@ -2387,6 +2438,10 @@ input, select, textarea {
 	.title {
 		font-size: 20.5pt;
 		margin: 0 0 0.5em 0;
+	}
+
+	.bannerText {
+		display: none;
 	}
 
 		/* Basic */
@@ -2414,6 +2469,10 @@ input, select, textarea {
 	}
 
 	@media screen and (max-width: 980px) {
+
+		.bannerText {
+			display: none;
+		}
 
 		.title {
 			font-size: 19.5pt;
@@ -2795,6 +2854,10 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 
+		.bannerText {
+			display: none;
+		}
+
 	/* Return to Top */
 
 		#return-to-top i {
@@ -2950,7 +3013,7 @@ input, select, textarea {
 			}
 
 			#main-wrapper, #footer-wrapper {
-				padding: 35px 30px 10px 30px;
+				padding: 65px 30px 10px 30px;
 			}
 
 		/* Logo */
@@ -3003,7 +3066,7 @@ input, select, textarea {
 			}
 
 			#mid-banner .bannerLogo {
-				height: 30%;
+				height: 25%;
 				width: 100%;
 			}
 
