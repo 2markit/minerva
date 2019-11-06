@@ -217,7 +217,7 @@ input, select, textarea {
 		width: 1700px;
 	}
 	.contained {
-    max-width: 1276px !important;
+    max-width: 1050px !important;
 	}
 
 
@@ -2229,6 +2229,14 @@ input, select, textarea {
 				border-left: solid 0.75em transparent;
 				border-right: solid 0.75em transparent;
 				z-index: 1;
+			}
+
+
+
+			#content hr {
+				max-width: 50%;
+				margin-top: 1em;
+				margin-bottom: 1em;
 			}
 
 /* Banner */
